@@ -36,13 +36,13 @@
 - **RAM:** 16 GB
 
 ---
+🛠️ Instructions
+1. Clone repo
 
-## 🛠️ Instructions
-
-### 1. Clone repo
 เปิด Terminal บนเครื่องของคุณแล้วรันคำสั่งเพื่อดึงโปรเจกต์ลงมา:
-```bash
-git clone [https://github.com/starpreeda1234/multi-agent-debate.git](https://github.com/starpreeda1234/multi-agent-debate.git)
+Bash
+
+git clone https://github.com/starpreeda1234/multi-agent-debate.git
 cd multi-agent-debate
 
 2. Install / Run
