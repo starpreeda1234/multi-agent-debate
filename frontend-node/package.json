@@ -1,0 +1,13 @@
+{
+  "name": "debate-control-node",
+  "version": "1.0.0",
+  "description": "Node controller instance for Multi Agent Debate Docker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0"
+  }
+}
