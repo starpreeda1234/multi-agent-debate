@@ -1,6 +1,15 @@
 # 🤖 Multi Agent Debate Platform v1.0 | ระบบดีเบตอัจฉริยะ
 "เปลี่ยนการระดมสมองแบบเดิม ๆ สู่มิติใหม่! แพลตฟอร์มจำลองเวทีดีเบตอัจฉริยะด้วยขุมพลัง AI เปิดโอกาสให้สุดยอดสมองกลร่วมถกเถียง คัดค้าน และวิเคราะห์ไอเดียในทุกมิติแบบเรียลไทม์ พร้อมติดตั้งและเปิดใช้งานได้ง่าย"
 
+<p align="center">
+  <img width="500" height="300" alt="Screenshot 2026-06-29 235950" src="https://github.com/user-attachments/assets/ebaf61fd-4360-4307-a53e-f6f52634dd86" /><br/>
+  <b>หน้าเวที</b>
+</p>
+
+<p align="center">
+  <img width="500" height="300" alt="Screenshot 2026-06-30 000206" src="https://github.com/user-attachments/assets/ea7f910a-1705-41e5-b31c-4481a5aacb4e" /><br/>
+  <b>การจัดการตัว Agent AI</b>
+</p>
 ---
 
 ## 📌 Table of Contents
