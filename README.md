@@ -25,7 +25,7 @@
 
 ## 💻 Hardware Requirements
 
-### Minimum Requirements (สำหรับรันผ่าน API Cloud เช่น OpenAI)
+### Minimum Requirements (สำหรับรับผ่าน API Cloud เช่น OpenAI)
 - **CPU:** 2 Cores
 - **RAM:** 4 GB
 - **Storage:** พื้นที่ว่างอย่างน้อย 10 GB (สำหรับ Docker Images)
@@ -44,3 +44,50 @@
 ```bash
 git clone [https://github.com/starpreeda1234/multi-agent-debate.git](https://github.com/starpreeda1234/multi-agent-debate.git)
 cd multi-agent-debate
+
+### 2. Install / Run
+
+ก่อนเริ่มรัน ตรวจสอบให้มั่นใจว่าเครื่องของคุณได้ติดตั้ง Docker และ Docker Compose เรียบร้อยแล้ว
+🐧 Linux (Ubuntu / Alibaba Cloud / AWS)
+
+# สั่งบิวด์และรันตู้คอนเทนเนอร์แบบ Background Mode
+sudo docker-compose up --build -d
+
+# ตรวจสอบสถานะว่าตู้รันขึ้นครบถ้วน (Up)
+sudo docker-compose ps
+
+🍏 macOS (Intel & Apple Silicon)
+# ตรวจสอบว่าเปิด Docker Desktop อยู่ จากนั้นรันคำสั่ง:
+docker-compose up --build -d
+
+# เช็กสถานะการทำงาน
+docker-compose ps
+
+🪟 Windows
+
+    เปิด Docker Desktop ขึ้นมาทำงาน
+
+    เปิด PowerShell หรือ Command Prompt (cmd) ในฐานะ Administrator แล้วเข้าไปยังโฟลเดอร์โปรเจกต์:
+docker-compose up --build -d
+docker-compose ps
+
+3. Open the web app
+
+เมื่อตู้คอนเทนเนอร์เปิดทำงานสำเร็จ คุณสามารถเข้าใช้งานผ่านหน้าเบราว์เซอร์ได้ทันที:
+
+    Local Machine: เข้าผ่านลิงก์ http://localhost:3001
+
+    Cloud Instance: เข้าผ่าน Public IP ของคุณ เช่น http://xxx.xxx.xxx.xxx:3001
+
+4. For Public Link
+
+หากต้องการให้ Gradio เจาะระบบทำ Share Link สาธารณะ (gradio.live) ส่งออกไปข้างนอกโดยตรง ให้แก้ไขที่ท้ายไฟล์ backend/app.py:
+
+# ปรับแก้ไขในฟังก์ชัน .launch() เพื่อเปิดสิทธิ์แชร์สาธารณะ
+demo.queue().launch(
+    server_name="0.0.0.0", 
+    server_port=7860,
+    share=True
+)
+
+จากนั้นสั่งรัน docker-compose up --build -d ใหม่ ตัวระบบจะลิงก์แบบสุ่มของ Gradio ที่คนนอกสามารถกดเข้าใช้งานได้ทันที 72 ชั่วโมงปรากฏขึ้นมาใน Log
